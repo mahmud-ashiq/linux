@@ -15,7 +15,7 @@ Before beginning the installation, ensure you have:
 Install all necessary packages for Cacti to function properly:
 
 ```bash
-sudo apt install -y apache2 php mariadb-server libapache2-mod-php  php-cli  snmp snmpd rrdtool  php-{mysql,curl,net-socket,gd,intl,pear,imap,memcache,pspell,tidy,xmlrpc,snmp,mbstring,gmp,json,xml,common,ldap}
+sudo apt install -y apache2 php mariadb-server libapache2-mod-php  php-cli  snmp snmpd rrdtool  php-{mysql,curl,net-socket,gd,intl,pear,imap,memcache,pspell,tidy,xmlrpc,snmp,mbstring,gmp,json,xml,common,ldap,intl}
 ```
 
 ## Step 2: Configure PHP
@@ -97,7 +97,8 @@ character-set-server=utf8mb4
 innodb_doublewrite=OFF
 max_heap_table_size=128M
 tmp_table_size=128M
-join_buffer_size=128M
+join_buffer_size=10M
+sort_buffer_size = 10M
 innodb_buffer_pool_size=2G
 innodb_flush_log_at_timeout=3
 innodb_read_io_threads=32
