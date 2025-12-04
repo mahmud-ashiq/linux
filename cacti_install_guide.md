@@ -48,6 +48,8 @@ Add the timezone setting:
 
 ```ini
 date.timezone = Asia/Dhaka
+memory_limit = 512M
+max_execution_time = 60
 ```
 
 ## Step 3: Configure MariaDB
